@@ -3,4 +3,13 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="writeButton">write</string>
+    <string name="dateText">date</string>
+    <string name="dateValue">dateVlaue</string>
+    <string name="yourMoodText">your mood</string>
+    <string name="sadRadio">sad</string>
+    <string name="happyRadio">happy</string>
+    <string name="angryRadio">angry</string>
+    <string name="typeHint">......</string>
+    <string name="doneButton">done</string>
 </resources>
