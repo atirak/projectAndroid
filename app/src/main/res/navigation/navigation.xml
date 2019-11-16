@@ -13,6 +13,12 @@
         <action
             android:id="@+id/action_homeFragment_to_writeFragment"
             app:destination="@id/writeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_adayFragment"
+            app:destination="@id/adayFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_moodFragment"
+            app:destination="@id/moodFragment" />
     </fragment>
     <fragment
         android:id="@+id/writeFragment"
@@ -29,4 +35,14 @@
             android:name="yearArg"
             app:argType="string" />
     </fragment>
+    <fragment
+        android:id="@+id/adayFragment"
+        android:name="buu.informatics.s59160624.daydiary.AdayFragment"
+        android:label="fragment_aday"
+        tools:layout="@layout/fragment_aday" />
+    <fragment
+        android:id="@+id/moodFragment"
+        android:name="buu.informatics.s59160624.daydiary.MoodFragment"
+        android:label="fragment_mood"
+        tools:layout="@layout/fragment_mood" />
 </navigation>
