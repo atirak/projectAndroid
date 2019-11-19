@@ -33,6 +33,27 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/todayButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:text="@string/adayButton"
+            app:layout_constraintBaseline_toBaselineOf="@+id/writeButton"
+            app:layout_constraintStart_toEndOf="@+id/writeButton" />
+
+        <Button
+            android:id="@+id/mymoodButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/moodButton"
+            app:layout_constraintBaseline_toBaselineOf="@+id/writeButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.325"
+            app:layout_constraintStart_toEndOf="@+id/todayButton" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

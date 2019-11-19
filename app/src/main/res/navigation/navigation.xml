@@ -34,15 +34,29 @@
         <argument
             android:name="yearArg"
             app:argType="string" />
+        <action
+            android:id="@+id/action_writeFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/adayFragment"
         android:name="buu.informatics.s59160624.daydiary.AdayFragment"
         android:label="fragment_aday"
-        tools:layout="@layout/fragment_aday" />
+        tools:layout="@layout/fragment_aday" >
+        <argument
+            android:name="dateArgs"
+            app:argType="string" />
+        <argument android:name="monthArgs"
+            app:argType="string" />
+    </fragment>
     <fragment
         android:id="@+id/moodFragment"
         android:name="buu.informatics.s59160624.daydiary.MoodFragment"
         android:label="fragment_mood"
         tools:layout="@layout/fragment_mood" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="buu.informatics.s59160624.daydiary.aboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
 </navigation>

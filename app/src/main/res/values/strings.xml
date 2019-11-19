@@ -12,4 +12,21 @@
     <string name="angryRadio">angry</string>
     <string name="typeHint">......</string>
     <string name="doneButton">done</string>
+    <string name="happyButton">Happy</string>
+    <string name="sadButton">SAD</string>
+    <string name="AngryButton">ANGRY</string>
+    <string name="sickButton">SICK</string>
+    <string name="about">about</string>
+    <string name="aboutText">Atirak Srisawang 59160624</string>
+    <string name="ondayText">On This Day</string>
+    <string name="dateText2">date</string>
+    <string name="contentText">content</string>
+    <string name="img">img</string>
+    <string name="adayButton">To Day</string>
+    <string name="moodButton">My Mood</string>
+    <string name="happyTotal">0</string>
+    <string name="sadTotal">0</string>
+    <string name="angryTotal">0</string>
+    <string name="sickTotal">0</string>
+    <string name="nothingTotal">0</string>
 </resources>

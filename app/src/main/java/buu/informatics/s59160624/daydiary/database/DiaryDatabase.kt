@@ -5,7 +5,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [Diary::class], version = 1,exportSchema = false)
+@Database(entities =  [Diary::class], version = 1)
 abstract class DiaryDatabase : RoomDatabase(){
     abstract val diaryDatabaseDao : DiaryDatabaseDAO
 
@@ -31,4 +31,24 @@ abstract class DiaryDatabase : RoomDatabase(){
             }
         }
     }
+
+//    abstract fun diaryDAO():DiaryDatabaseDAO
+//
+//    companion object {
+//        fun getAppDatabase(context: Context): DiaryDatabase =
+//            Room.databaseBuilder(context, DiaryDatabase::class.java, "DiaryItem").build()
+//    }
+
+//    companion object {
+//        @Volatile private var instance: DiaryDatabase? = null
+//        private val LOCK = Any()
+//
+//        operator fun invoke(context: Context)= instance ?: synchronized(LOCK){
+//            instance ?: buildDatabase(context).also { instance = it}
+//        }
+//
+//        private fun buildDatabase(context: Context) = Room.databaseBuilder(context,
+//            DiaryDatabase::class.java, "todo-list.db")
+//            .build()
+//    }
 }
