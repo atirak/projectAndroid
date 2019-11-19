@@ -22,11 +22,11 @@ class MoodFragment : Fragment() {
     ): View? {
         val binding = DataBindingUtil.inflate<FragmentMoodBinding>(inflater, R.layout.fragment_mood,container,false)
         val database = Room.databaseBuilder(this.context!!, DiaryDatabase::class.java,"DiaryItem").allowMainThreadQueries().build()
-        binding.happyTotal.text = database.diaryDatabaseDao.getMood("happy").toString()
-        binding.sadTotal.text = database.diaryDatabaseDao.getMood("sad").toString()
-        binding.angryTotal.text = database.diaryDatabaseDao.getMood("angry").toString()
-        binding.sickTotal.text = database.diaryDatabaseDao.getMood("sick").toString()
-        binding.nothingTotal.text = database.diaryDatabaseDao.getMood("nothing").toString()
+        binding.happyTotal.text = "Happy Total is \n"+database.diaryDatabaseDao.getMood("happy").toString()+" times"
+        binding.sadTotal.text = "Sad Total is \n"+database.diaryDatabaseDao.getMood("sad").toString()+" times"
+        binding.angryTotal.text = "Angry Total is \n"+database.diaryDatabaseDao.getMood("angry").toString()+" times"
+        binding.sickTotal.text = "Sick Total is \n"+database.diaryDatabaseDao.getMood("sick").toString()+" times"
+        binding.nothingTotal.text = "Nothing Total is \n"+database.diaryDatabaseDao.getMood("nothing").toString()+" times"
         return binding.root
     }
 

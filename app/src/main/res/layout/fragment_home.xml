@@ -17,19 +17,23 @@
             android:id="@+id/writeButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
+            android:background="@color/colorPrimary"
             android:text="@string/writeButton"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.109"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/calendarView"
-            app:layout_constraintVertical_bias="0.764" />
+            android:textColor="@android:color/background_light"
+            app:layout_constraintBaseline_toBaselineOf="@+id/todayButton"
+            app:layout_constraintEnd_toStartOf="@+id/todayButton"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <CalendarView
             android:id="@+id/calendarView"
             android:layout_width="298dp"
             android:layout_height="313dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:focusedMonthDateColor="@color/colorPrimary"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -38,10 +42,16 @@
             android:id="@+id/todayButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="36dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/colorPrimary"
             android:text="@string/adayButton"
-            app:layout_constraintBaseline_toBaselineOf="@+id/writeButton"
-            app:layout_constraintStart_toEndOf="@+id/writeButton" />
+            android:textColor="@android:color/background_light"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calendarView" />
 
         <Button
             android:id="@+id/mymoodButton"
@@ -49,10 +59,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
+            android:background="@color/colorPrimary"
             android:text="@string/moodButton"
-            app:layout_constraintBaseline_toBaselineOf="@+id/writeButton"
+            android:textColor="@android:color/background_light"
+            app:layout_constraintBaseline_toBaselineOf="@+id/todayButton"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.325"
             app:layout_constraintStart_toEndOf="@+id/todayButton" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 

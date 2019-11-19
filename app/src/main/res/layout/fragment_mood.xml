@@ -14,23 +14,23 @@
 
         <ImageView
             android:id="@+id/happyImage"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginStart="68dp"
-            android:layout_marginTop="16dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="32dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/happy" />
 
         <ImageView
             android:id="@+id/sadImage"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="32dp"
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.841"
+            app:layout_constraintHorizontal_bias="0.787"
             app:layout_constraintStart_toEndOf="@+id/happyImage"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/sad" />
@@ -39,9 +39,15 @@
             android:id="@+id/happyTotal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="104dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="24dp"
             android:text="@string/happyTotal"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@android:color/background_dark"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.185"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/happyImage" />
 
@@ -50,20 +56,29 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginEnd="80dp"
+            android:layout_marginEnd="16dp"
             android:text="@string/sadTotal"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@android:color/background_dark"
+            android:textSize="12sp"
             app:layout_constraintBaseline_toBaselineOf="@+id/happyTotal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/happyTotal" />
+            app:layout_constraintHorizontal_bias="0.862"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/angryTotal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="96dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="20dp"
             android:text="@string/angryTotal"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@android:color/background_dark"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.217"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/angryImage" />
 
@@ -72,12 +87,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginEnd="60dp"
+            android:layout_marginEnd="16dp"
             android:text="@string/sickTotal"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@android:color/background_dark"
+            android:textSize="12sp"
             app:layout_constraintBaseline_toBaselineOf="@+id/angryTotal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.946"
-            app:layout_constraintStart_toEndOf="@+id/angryTotal" />
+            app:layout_constraintHorizontal_bias="0.862"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/nothingTotal"
@@ -85,42 +104,47 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="@string/nothingTotal"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@android:color/background_dark"
+            android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.258"
+            app:layout_constraintHorizontal_bias="0.217"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/nothingImage"
-            app:layout_constraintVertical_bias="0.062" />
+            app:layout_constraintVertical_bias="0.023" />
 
         <ImageView
             android:id="@+id/sickImage"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginStart="140dp"
-            android:layout_marginTop="16dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.791"
             app:layout_constraintStart_toEndOf="@+id/angryImage"
             app:layout_constraintTop_toBottomOf="@+id/sadTotal"
             app:srcCompat="@drawable/sick" />
 
         <ImageView
             android:id="@+id/nothingImage"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="36dp"
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.173"
+            app:layout_constraintHorizontal_bias="0.17"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/angryTotal"
             app:srcCompat="@drawable/nothing" />
 
         <ImageView
             android:id="@+id/angryImage"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_marginStart="68dp"
             android:layout_marginTop="24dp"
             app:layout_constraintStart_toStartOf="parent"
