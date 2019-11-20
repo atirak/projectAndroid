@@ -9,6 +9,7 @@ import androidx.navigation.findNavController
 import buu.informatics.s59160624.daydiary.databinding.FragmentHomeBinding
 import android.widget.Toast
 import androidx.navigation.ui.NavigationUI
+import timber.log.Timber
 import java.util.*
 
 
@@ -21,23 +22,25 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment
         val binding = DataBindingUtil.inflate<FragmentHomeBinding>(inflater, R.layout.fragment_home,container,false)
         setHasOptionsMenu(true)
+        Timber.plant(Timber.DebugTree())
+
         var yearArg = Calendar.getInstance().get(Calendar.YEAR)
         var dateArg = Calendar.getInstance().get(Calendar.DATE)
         var monthArg = Calendar.getInstance().get(Calendar.MONTH)
 
         binding.writeButton.setOnClickListener { view: View ->
+            gotoWrite(view)
 
-            view.findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToWriteFragment(
-                Calendar.getInstance().get(Calendar.DATE).toString(),
-                Calendar.getInstance().get(Calendar.MONTH).toString(),
-                Calendar.getInstance().get(Calendar.YEAR).toString()
-            ))
 
         }
+        binding.todayButton.setOnClickListener { view: View ->
+            gotoToday(view,dateArg,monthArg)
+        }
 
+        binding.mymoodButton.setOnClickListener { view: View ->
+            gotoMood(view)
 
-
-
+        }
 
         binding.calendarView.setOnDateChangeListener{ view, year, month, dayOfMonth ->
             yearArg = year
@@ -45,19 +48,31 @@ class HomeFragment : Fragment() {
             monthArg = month
             Toast.makeText(activity, dateArg.toString()+" "+monthArg.toString()+" "+yearArg.toString(), Toast.LENGTH_SHORT).show()
         }
-        binding.todayButton.setOnClickListener { view: View ->
-            view.findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToAdayFragment(
-                dateArg.toString(),
-                monthArg.toString()
-            ))
 
-        }
-        binding.mymoodButton.setOnClickListener { view: View ->
-            view.findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToMoodFragment(
-            ))
 
-        }
+
         return binding.root
+    }
+
+    fun gotoWrite(view: View){
+        view.findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToWriteFragment(
+            Calendar.getInstance().get(Calendar.DATE).toString(),
+            Calendar.getInstance().get(Calendar.MONTH).toString(),
+            Calendar.getInstance().get(Calendar.YEAR).toString()
+        ))
+        Timber.i("gotoWrite Called")
+    }
+    fun gotoToday(view: View,dateArg: Int,monthArg: Int){
+        view.findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToAdayFragment(
+            dateArg.toString(),
+            monthArg.toString()
+        ))
+        Timber.i("gotoToday Called")
+    }
+    fun gotoMood(view: View){
+        view.findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToMoodFragment(
+        ))
+        Timber.i("gotoMood Called")
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {

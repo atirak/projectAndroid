@@ -1,6 +1,7 @@
 package buu.informatics.s59160624.daydiary
 
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -20,6 +21,7 @@ class MoodFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+//        setHasOptionsMenu(true)
         val binding = DataBindingUtil.inflate<FragmentMoodBinding>(inflater, R.layout.fragment_mood,container,false)
         val database = Room.databaseBuilder(this.context!!, DiaryDatabase::class.java,"DiaryItem").allowMainThreadQueries().build()
         binding.happyTotal.text = "Happy Total is \n"+database.diaryDatabaseDao.getMood("happy").toString()+" times"
@@ -30,5 +32,14 @@ class MoodFragment : Fragment() {
         return binding.root
     }
 
-
+//    private fun getShareIntent() : Intent {
+//        val args = GameWonFragmentArgs.fromBundle(arguments!!)
+//        val shareIntent = Intent(Intent.ACTION_SEND)
+//        shareIntent.setType("text/plain")
+//            .putExtra(Intent.EXTRA_TEXT, getString(R.string.share_success_text, args.numCorrect, args.numQuestions))
+//        return shareIntent
+//    }
+//    private fun shareSuccess() {
+//        startActivity(getShareIntent())
+//    }
 }

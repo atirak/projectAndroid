@@ -63,7 +63,7 @@ class WriteFragment : Fragment() {
             emp.mood = mood
             emp.content = binding.contentText.text.toString()
             database.diaryDatabaseDao.insert(emp)
-            Toast.makeText(context, "${emp.date}*${emp.dateTime}*${emp.mood}*${emp.content}", Toast.LENGTH_LONG).show()
+            Toast.makeText(context, "saved", Toast.LENGTH_LONG).show()
                 view.findNavController().navigate(R.id.action_writeFragment_to_homeFragment)
 
             }
